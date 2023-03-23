@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<form method="post" action="" enctype = "multipart/form-data">
+    {{ form.hidden_tag()}}
+    <fieldset class="form-group">
+      <div class="field">
+        {{ form.picture(class="form-control-file")}}
+        {% if form.picture.errors %}
+          <div class="smalltext font-italic text-danger">Wrong Format</div>
+        {% endif %}
+      </div>
+    </fieldset>
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info")}}
+    </div>
+  </form>
+{% endblock content %}

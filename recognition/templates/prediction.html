@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class="media" >
+        <div>
+            <div class="smalltext font-italic ">Image</div>
+            <img class="" src="{{image_file}}">
+        </div>
+        <div class="flex">
+            <div class="media-body picture">
+                <div class="smalltext font-italic">Caption</div>
+                <h4 class="text-justify-center">{{prediction}}</h4>        
+            </div>
+            <a href="{{url_for('recognize')}}" class='btn button'>Home Page</a>
+                    
+            <audio autoplay controls>
+                <source src="{{audio_file}}" type="audio/mp3">
+            </audio>
+        </div>
+    </div>
+
+
+
+{% endblock content %}
